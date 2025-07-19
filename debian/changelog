@@ -1,3 +1,9 @@
+eudev-openrc (0.0.2)  nitrux; urgency=medium
+
+  * Use supervise-daemon for daemons.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 19 Jul 2025 01:41:00 -0500
+
 eudev-openrc (0.0.1)  nitrux; urgency=medium
 
   * Create package.
