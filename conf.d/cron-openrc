@@ -1,6 +1,0 @@
-# /etc/conf.d/cron
-
-# Extra command-line arguments for the cron daemon.
-# See 'man 8 cron' for details.
-#
-# CRON_OPTS=""
