@@ -3,7 +3,6 @@
 description="Starts the eudev daemon to manage device nodes"
 
 command="/usr/sbin/udevd"
-command_args="--daemon"
 supervisor="supervise-daemon"
 
 depend() {
