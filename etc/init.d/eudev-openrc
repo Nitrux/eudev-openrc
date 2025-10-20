@@ -3,7 +3,7 @@
 description="Starts the eudev daemon to manage device nodes"
 
 command="/usr/sbin/udevd"
-supervisor="supervise-daemon"
+supervisor=supervise-daemon
 
 depend() {
     need dev procfs sysfs
