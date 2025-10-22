@@ -6,7 +6,7 @@ command="/usr/sbin/udevd"
 supervisor=supervise-daemon
 
 depend() {
-    need dev procfs sysfs
+    need dev procfs sysfs root
     provide udev
 }
 

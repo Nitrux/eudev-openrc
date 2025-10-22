@@ -1,3 +1,9 @@
+eudev-openrc (0.0.5)  nitrux; urgency=medium
+
+  * Add root service dependency.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 22 Oct 2025 13:50:00 -0500
+
 eudev-openrc (0.0.4)  nitrux; urgency=medium
 
   * Unquote supervise-daemon use.
