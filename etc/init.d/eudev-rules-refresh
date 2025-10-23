@@ -1,0 +1,37 @@
+#!/sbin/openrc-run
+
+description="Reload udev rules and retag input devices"
+
+depend() {
+    need udev localmount
+    before greetd
+}
+
+start() {
+    ebegin "Reloading udev rules"
+    if udevadm control --reload-rules; then
+        eend 0
+    else
+        eend $? "Failed to reload udev rules"
+        return 1
+    fi
+
+    ebegin "Triggering input device events"
+    if udevadm trigger --subsystem-match=input --action=change; then
+        eend 0
+    else
+        eend $? "Failed to trigger input events"
+        return 1
+    fi
+
+    ebegin "Waiting for udev to settle"
+    if udevadm settle --timeout=8; then
+        eend 0
+    else
+        eend 0 "udevadm settle timed out, continuing"
+    fi
+}
+
+stop() {
+    return 0
+}
