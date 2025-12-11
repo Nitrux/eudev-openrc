@@ -4,7 +4,7 @@ description="Reload udev rules and retag ALL devices"
 
 depend() {
     need udev localmount
-    before greetd
+    before greetd net
 }
 
 start() {

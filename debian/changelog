@@ -1,3 +1,9 @@
+eudev-openrc (0.0.9)  nitrux; urgency=medium
+
+  * Make eudev-rules-refresh load before network-manager.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 Dec 2025 05:09:00 -0500
+
 eudev-openrc (0.0.8)  nitrux; urgency=medium
 
   * Actually, make eudev-rules-refresh script to reload ALL rules.
