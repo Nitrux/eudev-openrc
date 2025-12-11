@@ -1,6 +1,6 @@
 #!/sbin/openrc-run
 
-description="Reload udev rules and retag input devices"
+description="Reload udev rules and retag ALL devices"
 
 depend() {
     need udev localmount
@@ -16,12 +16,8 @@ start() {
         return 1
     fi
 
-    ebegin "Retagging input and DRM devices"
-    if udevadm trigger \
-        --subsystem-match=input \
-        --subsystem-match=tty \
-        --subsystem-match=sound \
-        --subsystem-match=drm; then
+    ebegin "Retagging ALL THE BLOODY devices"
+    if udevadm trigger --action=change; then
         eend 0
     else
         eend $? "Failed to retrigger udev for devices"

@@ -1,6 +1,12 @@
+eudev-openrc (0.0.8)  nitrux; urgency=medium
+
+  * Actually, make eudev-rules-refresh script to reload ALL rules.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 Dec 2025 04:33:00 -0500
+
 eudev-openrc (0.0.7)  nitrux; urgency=medium
 
-  * Fix eudev-rules-refresh script to reload ALL rules.
+  * Fix eudev-rules-refresh script to reload rules.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Thu, 11 Dec 2025 03:12:00 -0500
 
