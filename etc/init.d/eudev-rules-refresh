@@ -17,7 +17,7 @@ start() {
     fi
 
     ebegin "Retagging ALL THE BLOODY devices"
-    if udevadm trigger --action=change; then
+    if udevadm trigger --action=add; then
         eend 0
     else
         eend $? "Failed to retrigger udev for devices"
