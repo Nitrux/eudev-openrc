@@ -16,11 +16,15 @@ start() {
         return 1
     fi
 
-    ebegin "Triggering input device events"
-    if udevadm trigger --subsystem-match=input --action=change; then
+    ebegin "Retagging input and DRM devices"
+    if udevadm trigger \
+        --subsystem-match=input \
+        --subsystem-match=tty \
+        --subsystem-match=sound \
+        --subsystem-match=drm; then
         eend 0
     else
-        eend $? "Failed to trigger input events"
+        eend $? "Failed to retrigger udev for devices"
         return 1
     fi
 
