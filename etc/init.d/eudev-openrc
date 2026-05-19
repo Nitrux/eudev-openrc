@@ -4,6 +4,7 @@ description="Starts the eudev daemon to manage device nodes"
 
 command="/usr/sbin/udevd"
 supervisor=supervise-daemon
+pidfile="/run/supervise-${RC_SVCNAME}.pid"
 
 depend() {
     need dev procfs sysfs

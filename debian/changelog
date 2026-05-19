@@ -1,3 +1,9 @@
+eudev-openrc (0.1.1)  nitrux; urgency=medium
+
+  * Set a supervise-daemon pidfile for the eudev-openrc service.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 19 May 2026 13:00:36 -0600
+
 eudev-openrc (0.1.0)  nitrux; urgency=medium
 
   * Brute force eudev to tag all devices.
